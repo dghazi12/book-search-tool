@@ -1,0 +1,32 @@
+.sort-label {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0 10px 0 10px;
+}
+
+.dropdown-menu {
+  width: auto;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .sort-label {
+    font-size: 18px;
+  }
+
+  .dropdown-menu {
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sort-label {
+    font-size: 16px;
+  }
+
+  .dropdown-menu {
+    height: 20px;
+  }
+}
