@@ -6,6 +6,7 @@ const Results = ({ image, title, author, publication }) => {
     <div className="results-container">
       <div className="img-container">
         <img
+          alt={`${title} cover`}
           className="image-style"
           src={
             image
