@@ -18,7 +18,7 @@ As a user running the application I can view a list of books matching or related
 
 ### Clone
 
-- Clone this project to your local machine ``
+- Clone this project to your local machine `https://github.com/dghazi12/build-a-search-tool.git`
 
 ### Setup
 
