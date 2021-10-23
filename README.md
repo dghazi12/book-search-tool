@@ -18,7 +18,7 @@ As a user running the application I can view a list of books matching or related
 
 ### Clone
 
-- Clone this project to your local machine `https://github.com/dghazi12/build-a-search-tool.git`
+- Clone this project to your local machine `https://github.com/dghazi12/book-search-tool.git`
 
 ### Setup
 
@@ -33,6 +33,10 @@ As a user running the application I can view a list of books matching or related
   $ npm start
   ```
 - Visit `http://localhost:3000`
+
+### Link to Application
+
+https://ghazi-book-search.herokuapp.com/
 
 ### Author
 
