@@ -23,7 +23,7 @@ Q. Pleases describe yourself using correctly formatted JSON
   "email": "davidaghazi@gmail.com",
   "role": "Front- End Developer",
 
-  "about me": "I offer over 2 years of experience as a Front- End Developer, specializing in HTML, CSS, JavaScript and React. I worked as a Front- End Developer at Civic Tech Toronto for nearly two years. Civic Tech is an organization that introduces the tech world to underprivileged kids. I was fortunate enough to be working with a team of developers to build a responsive and accessible static website for this organization using React, Gatsby and Material-UI. Currently, I am a Software Developer for a startup company called Grype Digital. At Grype, I am part of the software development team that is building new membership portals for clients using the MERN (MongoDB, Express, React, Node)stack. When I am not coding, I am most likely doing       some sort of physical activity, preferably outside :)",
+  "about me": "I offer over 2 years of experience as a Front- End Developer, specializing in HTML, CSS, JavaScript and React. I worked as a Front- End Developer at Civic Tech Toronto for nearly two years. Civic Tech is an organization that introduces the tech world to underprivileged kids. I was fortunate enough to be working with a team of developers to build a responsive and accessible static website for this organization using React, Gatsby and Material-UI. Currently, I am a Software Developer for a startup company called Grype Digital. At Grype, I am part of the software development team that is building new membership portals for clients using the MERN (MongoDB, Express, React, Node)stack. When I am not coding, I am most likely doing some sort of physical activity, preferably outside :)",
 
   "socialLinks":
     [
