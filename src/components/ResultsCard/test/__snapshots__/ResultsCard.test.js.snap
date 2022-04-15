@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="results-container"
+  >
+    <div
+      class="img-container"
+    >
+      <img
+        alt="A Game of Thrones cover"
+        class="image-style"
+        src="http://covers.openlibrary.org/b/id/9269962-M.jpg"
+      />
+    </div>
+    <div
+      class="info-container"
+    >
+      <h2
+        class="book-title"
+      >
+        A Game of Thrones 
+      </h2>
+      <p
+        class="book-info"
+      >
+        Author: George R. R. Martin
+      </p>
+      <p
+        class="book-info"
+      >
+        Publication:  
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

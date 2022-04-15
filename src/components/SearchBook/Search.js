@@ -13,12 +13,14 @@ const Search = ({ value, setChange, onClick }) => {
           onChange={setChange}
           required
           className="bar-style"
+          data-testid="search-placeholder"
         />
         <button
           onClick={onClick}
           type="submit"
           value="Search"
           className="search-button"
+          data-testid="search-button"
         >
           Search
         </button>

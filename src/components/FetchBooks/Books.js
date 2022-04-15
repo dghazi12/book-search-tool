@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Results from "../ResultsCard/Results";
 import Search from "../SearchBook/Search";
 import Dropdown from "../Dropdown/Dropdown";
+import { TailSpin } from "react-loader-spinner";
 import axios from "axios";
 
 const Books = () => {
@@ -9,8 +10,10 @@ const Books = () => {
   const [inputValue, setInputValue] = useState("");
   const [sortedData, setSortedData] = useState([]);
   const [sortCategory, setSortCategory] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const fetchBooks = (e) => {
+    setLoading(false);
     e.preventDefault();
     setAllBooks([]);
     setSortCategory("");
@@ -27,6 +30,8 @@ const Books = () => {
           setAllBooks((allBooks) => [...allBooks, bookResults]);
         });
         setSortCategory("title");
+        setLoading(true);
+        console.log(allBooks);
       })
       .catch((err) => {
         console.log(err);
@@ -40,37 +45,62 @@ const Books = () => {
         publication: "publication",
       };
       const sortCategory = categories[category];
-      const sorted = [...allBooks].sort(
-        (a, b) => b[sortCategory] - a[sortCategory]
-      );
-      setSortedData(sorted);
+      if (sortCategory === "title") {
+        const sorted = [...allBooks].sort((a, b) =>
+          a.title.localeCompare(b.title)
+        );
+        setSortedData(sorted);
+      } else {
+        const sorted = [...allBooks].sort(
+          (a, b) => b[sortCategory] - a[sortCategory]
+        );
+        setSortedData(sorted);
+      }
     };
     sortResults(sortCategory);
   }, [sortCategory]);
 
   return (
-    <div className="App">
-      <Search
-        value={inputValue}
-        setChange={(e) => setInputValue(e.target.value)}
-        onClick={fetchBooks}
-      />
+    <>
+      <div className="App">
+        <Search
+          value={inputValue}
+          setChange={(e) => setInputValue(e.target.value)}
+          onClick={fetchBooks}
+        />
 
-      <Dropdown setChange={(e) => setSortCategory(e.target.value)} />
+        <Dropdown
+          data-testid="dropdown"
+          setChange={(e) => setSortCategory(e.target.value)}
+        />
 
-      <div>
-        {sortedData.map((item, index) => (
-          <div key={index}>
-            <Results
-              image={item.img}
-              title={item.title}
-              author={item.author}
-              publication={item.publication}
-            />
+        {loading ? (
+          <div>
+            {sortedData.map((item, index) => (
+              <div key={index}>
+                <Results
+                  image={item.img}
+                  title={item.title}
+                  author={item.author}
+                  publication={item.publication}
+                />
+              </div>
+            ))}
           </div>
-        ))}
+        ) : (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: "20px",
+            }}
+          >
+            <TailSpin color="#000000" height={50} width={50} />
+          </div>
+        )}
       </div>
-    </div>
+    </>
   );
 };
 

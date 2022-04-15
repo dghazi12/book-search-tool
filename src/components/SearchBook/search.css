@@ -14,13 +14,20 @@
 }
 
 .bar-style {
-  width: 350px;
+  width: 250px;
   background: whitesmoke;
   border: solid;
   border-color: #23252f;
   padding: 10px;
   border-radius: 10px;
   margin: 20px 10px 20px 0px;
+}
+
+.bar-style:focus {
+  border: solid #993399;
+  background-color: white;
+  width: 350px;
+  transition: ease-in-out, width 0.35s ease-in-out;
 }
 
 .search-button {
@@ -37,15 +44,15 @@
   cursor: pointer;
 }
 
+.search-button:hover {
+  background-color: gray;
+  color: whitesmoke;
+}
+
 @media screen and (max-width: 768px) {
   .main-header {
     font-size: 24px;
     line-height: 41px;
-  }
-
-  .bar-style {
-    width: 300px;
-    padding: 8px;
   }
 }
 
@@ -56,8 +63,12 @@
   }
 
   .bar-style {
-    width: 200px;
+    width: 150px;
     padding: 5px;
+  }
+
+  .bar-style:focus {
+    width: 200px;
   }
 
   .search-button {
